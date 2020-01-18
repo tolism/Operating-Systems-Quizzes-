@@ -1,0 +1,9 @@
+//Fish function that finds pictures , creates directories and stores them by the taken date  
+
+
+function sort_pictures
+                                               for val in  (find ./$argv[1] -name "*.jpg") 
+                                                   mkdir -p $argv[2]/(date -r $val "+%G/%B/%d")
+                                                  cp $val $argv[2]/(date -r $val "+%G/%B/%d")
+                                              end 
+                                          end 
